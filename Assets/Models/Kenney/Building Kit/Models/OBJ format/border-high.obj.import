@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://pdnutcb353by"
+path="res://.godot/imported/border-high.obj-3b05dc2af0f6ad1a21a281c6b5bed327.mesh"
+
+[deps]
+
+files=["res://.godot/imported/border-high.obj-3b05dc2af0f6ad1a21a281c6b5bed327.mesh"]
+
+source_file="res://Assets/Models/Kenney/Building Kit/Models/OBJ format/border-high.obj"
+dest_files=["res://.godot/imported/border-high.obj-3b05dc2af0f6ad1a21a281c6b5bed327.mesh", "res://.godot/imported/border-high.obj-3b05dc2af0f6ad1a21a281c6b5bed327.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
