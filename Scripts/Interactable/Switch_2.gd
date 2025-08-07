@@ -6,12 +6,11 @@ var is_pressed: bool = false
 var state: bool = false
 
 func get_interaction_text():
-	return "switch"
+	return "E/LMB : Switch"
 
-func interact():
+func primary():
 	if is_pressed:
 		return
-	print("interacted with switch")
 	is_pressed = true
 	state = not state
 	if state:

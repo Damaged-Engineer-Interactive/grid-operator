@@ -4,5 +4,8 @@ class_name Interactable
 func get_interaction_text():
 	return "Interact"
 
-func interact():
-	print("Interacted with %s" % name)
+func primary():
+	push_error("Must be implemented in sub class!")
+
+func secondary():
+	push_error("Must be implemented in sub class!")

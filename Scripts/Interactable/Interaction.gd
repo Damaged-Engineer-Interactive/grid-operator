@@ -15,8 +15,12 @@ func _process(_delta: float) -> void:
 			current_collider = collider
 			set_interaction_text(collider.get_interaction_text())
 		
-		if Input.is_action_just_pressed(&"interact"):
-			collider.interact()
+		if Input.is_action_just_pressed(&"primary"):
+			collider.primary()
+			set_interaction_text(collider.get_interaction_text())
+		
+		if Input.is_action_just_pressed(&"secondary"):
+			collider.secondary()
 			set_interaction_text(collider.get_interaction_text())
 	elif current_collider:
 		current_collider = null
@@ -30,6 +34,6 @@ func set_interaction_text(text: String = ""):
 		interaction_label.set_text("")
 		interaction_label.get_parent().hide()
 	else:
-		interaction_label.set_text("Click to %s" % text)
+		interaction_label.set_text(text)
 		interaction_label.get_parent().show()
 	

@@ -5,12 +5,11 @@ extends Interactable
 var is_pressed: bool = false
 
 func get_interaction_text():
-	return "interact"
+	return "E/LMB : Push"
 
-func interact():
+func primary():
 	if is_pressed:
 		return
-	print("interacted with button")
 	is_pressed = true
 	animation_player.play(&"press")
 
