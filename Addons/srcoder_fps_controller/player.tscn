@@ -5,16 +5,15 @@
 [ext_resource type="Script" uid="uid://35agur3owdev" path="res://Scripts/Interactable/Interaction.gd" id="3_8bma2"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ntw7j"]
-radius = 0.4
-height = 1.8
+radius = 0.6
+height = 3.0
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ha1jo"]
-radius = 0.4
-height = 1.8
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8bma2"]
+radius = 0.6
+height = 3.0
 
 [node name="Player" type="CharacterBody3D"]
 physics_interpolation_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10191, 0)
 script = ExtResource("1_f6swd")
 
 [node name="PlayerMesh" type="MeshInstance3D" parent="."]
@@ -24,16 +23,16 @@ mesh = SubResource("CapsuleMesh_ntw7j")
 surface_material_override/0 = ExtResource("2_fs15m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_ha1jo")
+shape = SubResource("CapsuleShape3D_8bma2")
 
 [node name="CameraPivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49559, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
 fov = 90.0
 
 [node name="InteractionRayCast" type="RayCast3D" parent="CameraPivot/Camera3D"]
-target_position = Vector3(0, 0, -1.5)
+target_position = Vector3(0, 0, -2.5)
 collision_mask = 2
 script = ExtResource("3_8bma2")
 

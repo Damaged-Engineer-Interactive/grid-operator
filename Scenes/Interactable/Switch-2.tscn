@@ -180,7 +180,7 @@ _data = {
 &"switch": SubResource("Animation_q1skn")
 }
 
-[node name="Button" type="Node3D"]
+[node name="Switch_2" type="Node3D"]
 
 [node name="Base" type="MeshInstance3D" parent="."]
 unique_name_in_owner = true
@@ -201,6 +201,7 @@ script = ExtResource("1_fjelj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable/Interactable"]
 transform = Transform3D(0.819152, 0, 0.573576, -6.66851e-17, 1, 9.52362e-17, -0.573576, -1.16262e-16, 0.819152, -0.0180039, 0.031029, -3.60749e-18)
 shape = SubResource("ConcavePolygonShape3D_wkc2x")
+debug_color = Color(0.7, 0.607031, 0, 0.42)
 
 [node name="Text_O" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.065, 0.0204074, -0.0592561)

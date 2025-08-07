@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://slt74df64j4j"
-path="res://.godot/imported/Lever_1.blend-950e2d26384b4283b1169f2958cfc365.scn"
+path="res://.godot/imported/Lever.blend-fa2a67c5b61cca71277adf8b95f9d84f.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Custom/Control Elements/Inputs/Lever/Lever_1.blend"
-dest_files=["res://.godot/imported/Lever_1.blend-950e2d26384b4283b1169f2958cfc365.scn"]
+source_file="res://Assets/Models/Custom/Control Elements/Inputs/Lever.blend"
+dest_files=["res://.godot/imported/Lever.blend-fa2a67c5b61cca71277adf8b95f9d84f.scn"]
 
 [params]
 

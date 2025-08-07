@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bervrja387ap1"
-path="res://.godot/imported/Panel_1.blend-8017656002ed395dfdf591b813755356.scn"
+uid="uid://ch2rhdh2s1bqb"
+path="res://.godot/imported/Buzzer.blend-e2d72d1f99110fc2a1bb26f900847fa5.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Custom/Control Elements/Panel/Panel_1.blend"
-dest_files=["res://.godot/imported/Panel_1.blend-8017656002ed395dfdf591b813755356.scn"]
+source_file="res://Assets/Models/Custom/Control Elements/Inputs/Buzzer.blend"
+dest_files=["res://.godot/imported/Buzzer.blend-e2d72d1f99110fc2a1bb26f900847fa5.scn"]
 
 [params]
 
