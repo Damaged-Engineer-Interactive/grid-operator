@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dy26xc485fhld" path="res://Addons/srcoder_fps_controller/player.tscn" id="2_j0p05"]
 [ext_resource type="PackedScene" uid="uid://cyvanvp7040t8" path="res://Scenes/Interactable/Switch-2.tscn" id="4_gjpho"]
 [ext_resource type="PackedScene" uid="uid://chqeh7rsslkub" path="res://Scenes/Interactable/Switch-3.tscn" id="5_p70al"]
-[ext_resource type="PackedScene" uid="uid://clopjf0631iyh" path="res://Scenes/Interactable/Lever.tscn" id="6_45d1s"]
+[ext_resource type="PackedScene" uid="uid://b6ugmjbldobwl" path="res://Scenes/Interactable/Lever.tscn" id="6_45d1s"]
 [ext_resource type="PackedScene" uid="uid://c7ydu5mefhvsh" path="res://Scenes/Interactable/Button.tscn" id="14_8l3nt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j0p05"]
@@ -112,27 +112,24 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -11.24
 
 [node name="Button" parent="Panel_1" instance=ExtResource("14_8l3nt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0.01, -0.01)
-color_base = Color(0.707031, 0.193329, 0.193329, 1)
-color_case = Color(0.344255, 0.769531, 0.171341, 1)
-color_handle = Color(0.277468, 0.175354, 0.863281, 1)
 
 [node name="Button2" parent="Panel_1" instance=ExtResource("14_8l3nt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23, 0.01, -0.23)
-color_base = Color(0.707031, 0.193329, 0.193329, 1)
-color_case = Color(0.344255, 0.769531, 0.171341, 1)
-color_handle = Color(0.277468, 0.175354, 0.863281, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23, 0.01, -0.01)
 
-[node name="Button3" parent="Panel_1" instance=ExtResource("14_8l3nt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45, 0.01, -0.45)
-color_base = Color(0.707031, 0.193329, 0.193329, 1)
-color_case = Color(0.344255, 0.769531, 0.171341, 1)
-color_handle = Color(0.277468, 0.175354, 0.863281, 1)
+[node name="Lever" parent="Panel_1" instance=ExtResource("6_45d1s")]
+transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -4.37114e-08, 0.01, 0.01, -0.45)
 
-[node name="Switch_2" parent="." instance=ExtResource("4_gjpho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.79709, 0.0820581, -2.49034)
+[node name="Lever2" parent="Panel_1" instance=ExtResource("6_45d1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0.01, -0.67)
 
-[node name="Switch_3" parent="." instance=ExtResource("5_p70al")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98239, 0.0499992, -0.82702)
+[node name="Switch_2" parent="Panel_1" instance=ExtResource("4_gjpho")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.23, 0.01, -0.23)
 
-[node name="Lever" parent="." instance=ExtResource("6_45d1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.03194, 0.0499997, 0.117136)
+[node name="Switch_3" parent="Panel_1" instance=ExtResource("5_p70al")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.23, 0.01, -0.45)
+
+[node name="Switch_4" parent="Panel_1" instance=ExtResource("4_gjpho")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.45, 0.01, -0.23)
+
+[node name="Switch_5" parent="Panel_1" instance=ExtResource("5_p70al")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.45, 0.01, -0.45)

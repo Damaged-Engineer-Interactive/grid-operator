@@ -6,7 +6,7 @@ var is_pressed: bool = false
 var state: bool = false
 
 func get_interaction_text():
-	return "E/LMB : Pull"
+	return "E/LMB : Switch"
 
 func primary():
 	if is_pressed:
