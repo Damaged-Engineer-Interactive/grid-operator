@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://tibk7i4h7m3b"]
+[gd_scene load_steps=29 format=4 uid="uid://tibk7i4h7m3b"]
 
 [ext_resource type="PackedScene" uid="uid://dap2alfsh22tf" path="res://Assets/Models/Custom/Control Elements/Panel/Panel_1_old.blend" id="2_5nsto"]
 [ext_resource type="PackedScene" uid="uid://dy26xc485fhld" path="res://Addons/srcoder_fps_controller/player.tscn" id="2_j0p05"]
@@ -11,6 +11,7 @@
 [ext_resource type="Material" uid="uid://dr2thsdo4k5at" path="res://Assets/Materials/Lever/OFF_Lit.material" id="9_ti1bm"]
 [ext_resource type="Material" uid="uid://bm6ubdx4ppxd4" path="res://Assets/Materials/Lever/ON_Dimm.material" id="10_op4cu"]
 [ext_resource type="Material" uid="uid://dilbr8gso0kf1" path="res://Assets/Materials/Lever/ON_Lit.tres" id="11_8l3nt"]
+[ext_resource type="PackedScene" uid="uid://dkv0ywkjwnar8" path="res://Scenes/Interactable/e_stop_POC.tscn" id="13_op4cu"]
 [ext_resource type="PackedScene" uid="uid://c7ydu5mefhvsh" path="res://Scenes/Interactable/Button.tscn" id="14_8l3nt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j0p05"]
@@ -387,5 +388,4 @@ skeleton = NodePath("")
 mesh = SubResource("ArrayMesh_r0dna")
 skeleton = NodePath("")
 
-[node name="Switch_3" parent="Panel_new5/Slot_4" instance=ExtResource("5_p70al")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+[node name="E-stop" parent="Panel_new5/Slot_4" instance=ExtResource("13_op4cu")]
