@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://c7ydu5mefhvsh"]
+[gd_scene load_steps=16 format=4 uid="uid://c7ydu5mefhvsh"]
 
 [ext_resource type="Material" uid="uid://bwcwjfcuqp1dr" path="res://Assets/Materials/Socket_Base.material" id="1_fqkew"]
 [ext_resource type="Script" uid="uid://b46h2tivcleb7" path="res://Scripts/Interactable/Button.gd" id="2_fqkew"]
 [ext_resource type="Material" uid="uid://bm6ubdx4ppxd4" path="res://Assets/Materials/Lever/ON_Dimm.material" id="2_mbb01"]
+[ext_resource type="Material" uid="uid://dt5hmyg6vun76" path="res://Assets/Materials/Interactable.material" id="2_ot330"]
 [ext_resource type="Material" uid="uid://ywdsxj1diitp" path="res://Assets/Materials/Interactable_Emission.material" id="4_mbb01"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_jbuen"]
@@ -92,7 +93,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 90,
 "index_data": PackedByteArray("AAABAAIAAQADAAQAAAADAAEAAwAFAAYAAwAHAAUABQAHAAgAAAAHAAMABwAJAAoABwALAAkACQALAAwABwANAAsAAAANAAcACwAOAA8ACwANAA4ADgANABAADQARABIADQATABEAEQATABQADQAAABUADQAVABMAEwAWABcAEwAVABYAFgAVABgAGQAAABoAGwAAABkAFQAAABsAGwAZABwAFQAbAB0AHQAbAB4AFQAdAB8A"),
-"material": ExtResource("2_mbb01"),
+"material": ExtResource("2_ot330"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 32,
@@ -103,6 +104,33 @@ shadow_mesh = SubResource("ArrayMesh_v7j3a")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fqkew"]
 data = PackedVector3Array(0.0272, 0.039, -0.0656, 0, 0.039, -0.071, 0.0138, 0.039, -0.0696, 0, 0.039, -0.071, -0.0272, 0.039, -0.0656, -0.0138, 0.039, -0.0696, 0.0272, 0.039, -0.0656, -0.0272, 0.039, -0.0656, 0, 0.039, -0.071, -0.0272, 0.039, -0.0656, -0.0502, 0.039, -0.0502, -0.0394, 0.039, -0.059, -0.0272, 0.039, -0.0656, -0.0656, 0.039, -0.0272, -0.0502, 0.039, -0.0502, -0.0502, 0.039, -0.0502, -0.0656, 0.039, -0.0272, -0.059, 0.039, -0.0394, 0.0272, 0.039, -0.0656, -0.0656, 0.039, -0.0272, -0.0272, 0.039, -0.0656, -0.0656, 0.039, -0.0272, -0.071, 0.039, 0, -0.0696, 0.039, -0.0138, -0.0656, 0.039, -0.0272, -0.0656, 0.039, 0.0272, -0.071, 0.039, 0, -0.071, 0.039, 0, -0.0656, 0.039, 0.0272, -0.0696, 0.039, 0.0138, -0.0656, 0.039, -0.0272, -0.0272, 0.039, 0.0656, -0.0656, 0.039, 0.0272, 0.0272, 0.039, -0.0656, -0.0272, 0.039, 0.0656, -0.0656, 0.039, -0.0272, -0.0656, 0.039, 0.0272, -0.0502, 0.039, 0.0502, -0.059, 0.039, 0.0394, -0.0656, 0.039, 0.0272, -0.0272, 0.039, 0.0656, -0.0502, 0.039, 0.0502, -0.0502, 0.039, 0.0502, -0.0272, 0.039, 0.0656, -0.0394, 0.039, 0.059, -0.0272, 0.039, 0.0656, 0, 0.039, 0.071, -0.0138, 0.039, 0.0696, -0.0272, 0.039, 0.0656, 0.0272, 0.039, 0.0656, 0, 0.039, 0.071, 0, 0.039, 0.071, 0.0272, 0.039, 0.0656, 0.0138, 0.039, 0.0696, -0.0272, 0.039, 0.0656, 0.0272, 0.039, -0.0656, 0.0656, 0.039, 0.0272, -0.0272, 0.039, 0.0656, 0.0656, 0.039, 0.0272, 0.0272, 0.039, 0.0656, 0.0272, 0.039, 0.0656, 0.0502, 0.039, 0.0502, 0.0394, 0.039, 0.059, 0.0272, 0.039, 0.0656, 0.0656, 0.039, 0.0272, 0.0502, 0.039, 0.0502, 0.0502, 0.039, 0.0502, 0.0656, 0.039, 0.0272, 0.059, 0.039, 0.0394, 0.0502, 0.039, -0.0502, 0.0272, 0.039, -0.0656, 0.0394, 0.039, -0.059, 0.0656, 0.039, -0.0272, 0.0272, 0.039, -0.0656, 0.0502, 0.039, -0.0502, 0.0656, 0.039, 0.0272, 0.0272, 0.039, -0.0656, 0.0656, 0.039, -0.0272, 0.0656, 0.039, -0.0272, 0.0502, 0.039, -0.0502, 0.059, 0.039, -0.0394, 0.0656, 0.039, 0.0272, 0.0656, 0.039, -0.0272, 0.071, 0.039, 0, 0.071, 0.039, 0, 0.0656, 0.039, -0.0272, 0.0696, 0.039, -0.0138, 0.0656, 0.039, 0.0272, 0.071, 0.039, 0, 0.0696, 0.039, 0.0138)
+
+[sub_resource type="Animation" id="Animation_ot330"]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Interactable:mesh:surface_0/material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.166667, 0.175, 0.366667, 0.38),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_ot330"), ExtResource("2_mbb01"), ExtResource("2_mbb01"), ExtResource("2_ot330")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Interactable:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.001029, 0), Vector3(0, -0.015, 0), Vector3(0, -0.001, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_pgp2g"]
 resource_name = "press"
@@ -129,21 +157,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [ExtResource("2_mbb01"), ExtResource("4_mbb01"), ExtResource("2_mbb01")]
-}
-
-[sub_resource type="Animation" id="Animation_ot330"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Interactable:mesh:surface_0/material")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_mbb01")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fqkew"]
@@ -184,6 +197,5 @@ debug_color = Color(0.7, 0.595, 0, 1)
 libraries = {
 &"": SubResource("AnimationLibrary_fqkew")
 }
-speed_scale = 2.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="Interactable/Interactable" method="_on_animation_player_animation_finished"]

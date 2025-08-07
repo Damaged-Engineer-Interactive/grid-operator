@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0busmb3jiqg5" path="res://Scripts/Interactable/Switch_3.gd" id="1_h4kis"]
 [ext_resource type="Material" uid="uid://bwcwjfcuqp1dr" path="res://Assets/Materials/Socket_Base.material" id="1_xbfif"]
-[ext_resource type="Material" uid="uid://bm6ubdx4ppxd4" path="res://Assets/Materials/Lever/ON_Dimm.material" id="2_jyetm"]
+[ext_resource type="Material" uid="uid://dt5hmyg6vun76" path="res://Assets/Materials/Interactable.material" id="2_jyetm"]
 [ext_resource type="Material" uid="uid://dbyw5f6678t7f" path="res://Assets/Materials/Text_Active.material" id="4_rgytm"]
 [ext_resource type="Material" uid="uid://84gsvp0p7mma" path="res://Assets/Materials/Text_Inactive.material" id="5_jyetm"]
 
