@@ -11,7 +11,7 @@ func primary():
 	if is_pressed:
 		return
 	is_pressed = true
-	animation_player.play(&"press")
+	animation_player.play(&"push")
 
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:

@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=4 uid="uid://tibk7i4h7m3b"]
+[gd_scene load_steps=28 format=4 uid="uid://tibk7i4h7m3b"]
 
 [ext_resource type="PackedScene" uid="uid://dap2alfsh22tf" path="res://Assets/Models/Custom/Control Elements/Panel/Panel_1_old.blend" id="2_5nsto"]
 [ext_resource type="PackedScene" uid="uid://dy26xc485fhld" path="res://Addons/srcoder_fps_controller/player.tscn" id="2_j0p05"]
 [ext_resource type="PackedScene" uid="uid://cyvanvp7040t8" path="res://Scenes/Interactable/Switch-2.tscn" id="4_gjpho"]
 [ext_resource type="PackedScene" uid="uid://chqeh7rsslkub" path="res://Scenes/Interactable/Switch-3.tscn" id="5_p70al"]
 [ext_resource type="PackedScene" uid="uid://b6ugmjbldobwl" path="res://Scenes/Interactable/Lever.tscn" id="6_45d1s"]
+[ext_resource type="PackedScene" uid="uid://dl2gaot7gsvgw" path="res://Scenes/Interactable/Buzzer.tscn" id="7_ti1bm"]
 [ext_resource type="Material" uid="uid://bwcwjfcuqp1dr" path="res://Assets/Materials/Socket_Base.material" id="7_y7y61"]
 [ext_resource type="Material" uid="uid://biq472xh0v3rl" path="res://Assets/Materials/Lever/OFF_Dimm.material" id="8_7yo87"]
 [ext_resource type="Material" uid="uid://dr2thsdo4k5at" path="res://Assets/Materials/Lever/OFF_Lit.material" id="9_ti1bm"]
@@ -305,6 +306,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.45, 
 [node name="Panel_2" parent="." instance=ExtResource("2_5nsto")]
 transform = Transform3D(1, 0, 0, 0, -5.96046e-08, -1, 0, 1, -5.96046e-08, -11.2483, 2.50991, -1.35027)
 
+[node name="Buzzer" parent="Panel_2" instance=ExtResource("7_ti1bm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45, 0, -0.01)
+
 [node name="Button" parent="Panel_2" instance=ExtResource("14_8l3nt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0.01, -0.01)
 
@@ -371,7 +375,6 @@ mesh = SubResource("ArrayMesh_mvfa8")
 skeleton = NodePath("")
 
 [node name="Button" parent="Panel_new5/Slot_3" instance=ExtResource("14_8l3nt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Slot_4" type="Node3D" parent="Panel_new5"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.25, 0.25, 0)
