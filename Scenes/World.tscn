@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://tibk7i4h7m3b"]
+[gd_scene load_steps=14 format=3 uid="uid://tibk7i4h7m3b"]
 
 [ext_resource type="PackedScene" uid="uid://dap2alfsh22tf" path="res://Assets/Models/Custom/Control Elements/Panel/Panel_1.blend" id="2_5nsto"]
 [ext_resource type="PackedScene" uid="uid://dy26xc485fhld" path="res://Addons/srcoder_fps_controller/player.tscn" id="2_j0p05"]
 [ext_resource type="PackedScene" uid="uid://cyvanvp7040t8" path="res://Scenes/Interactable/Switch-2.tscn" id="4_gjpho"]
 [ext_resource type="PackedScene" uid="uid://chqeh7rsslkub" path="res://Scenes/Interactable/Switch-3.tscn" id="5_p70al"]
+[ext_resource type="PackedScene" uid="uid://clopjf0631iyh" path="res://Scenes/Interactable/Lever.tscn" id="6_45d1s"]
 [ext_resource type="PackedScene" uid="uid://c7ydu5mefhvsh" path="res://Scenes/Interactable/Button.tscn" id="14_8l3nt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j0p05"]
@@ -132,3 +133,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.79709, 0.0820581, -2.49034
 
 [node name="Switch_3" parent="." instance=ExtResource("5_p70al")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98239, 0.0499992, -0.82702)
+
+[node name="Lever" parent="." instance=ExtResource("6_45d1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.03194, 0.0499997, 0.117136)
