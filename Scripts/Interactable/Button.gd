@@ -4,8 +4,8 @@ extends Interactable
 
 var is_pressed: bool = false
 
-func get_interaction_text():
-	return "E/LMB : Push"
+func primary_text() -> String:
+	return "Push"
 
 func primary():
 	if is_pressed:

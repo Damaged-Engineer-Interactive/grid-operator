@@ -5,8 +5,11 @@ extends Interactable
 var is_pressed: bool = false
 var state: bool = false
 
-func get_interaction_text():
-	return "E/LMB : Activate\nQ/RMB : Reset"
+func primary_text() -> String:
+	return "Press"
+
+func secondary_text() -> String:
+	return "Reset"
 
 func primary():
 	if is_pressed or state:

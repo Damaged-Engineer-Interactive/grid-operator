@@ -1,8 +1,11 @@
 extends Node3D
 class_name Interactable
 
-func get_interaction_text():
-	return "Interact"
+func primary_text() -> String:
+	return ""
+
+func secondary_text() -> String:
+	return ""
 
 func primary():
 	push_error("Must be implemented in sub class!")

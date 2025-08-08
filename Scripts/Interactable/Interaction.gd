@@ -2,7 +2,10 @@ extends RayCast3D
 
 var current_collider
 
-@onready var interaction_label = get_node(^"/root/World/UI/InteractionLabel/InteractionLabel")
+@onready var primary_container: PanelContainer = get_node(^"/root/World/%PrimaryAction")
+@onready var primary_label: Label = get_node(^"/root/World/%PrimaryActionLabel")
+@onready var secondary_container: PanelContainer = get_node(^"/root/World/%SecondaryAction")
+@onready var secondary_label: Label = get_node(^"/root/World/%SecondaryActionLabel")
 
 func _ready() -> void:
 	set_interaction_text()
@@ -13,27 +16,34 @@ func _process(_delta: float) -> void:
 	if is_colliding() and collider is Interactable:
 		if current_collider != collider:
 			current_collider = collider
-			set_interaction_text(collider.get_interaction_text())
+			set_interaction_text(collider)
 		
 		if Input.is_action_just_pressed(&"primary"):
 			collider.primary()
-			set_interaction_text(collider.get_interaction_text())
+			set_interaction_text(collider)
 		
 		if Input.is_action_just_pressed(&"secondary"):
 			collider.secondary()
-			set_interaction_text(collider.get_interaction_text())
+			set_interaction_text(collider)
 	elif current_collider:
 		current_collider = null
 		set_interaction_text()
 
-func set_interaction_text(text: String = ""):
-	if not interaction_label:
-		return
-	
-	if !text:
-		interaction_label.set_text("")
-		interaction_label.get_parent().hide()
+func set_interaction_text(collider: Interactable = null):
+	if collider:
+		if collider.primary_text() != "":
+			primary_container.show()
+			primary_label.text = collider.primary_text()
+		else:
+			primary_container.hide()
+		
+		if collider.secondary_text() != "":
+			secondary_container.show()
+			secondary_label.text = collider.secondary_text()
+		else:
+			secondary_container.hide()
+		
 	else:
-		interaction_label.set_text(text)
-		interaction_label.get_parent().show()
+		primary_container.hide()
+		secondary_container.hide()
 	
