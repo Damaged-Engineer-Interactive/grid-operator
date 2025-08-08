@@ -13,6 +13,6 @@ func primary():
 	is_pressed = true
 	animation_player.play(&"press")
 
-
+#test comment
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	is_pressed = false
