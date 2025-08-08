@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://domdposegjyai"
-path="res://.godot/imported/German_E-stop.blend-7e62bbe62ebc009af10c53e79f5ecbc5.scn"
+uid="uid://bpaum35ndau5x"
+path="res://.godot/imported/slot_inverted_template.blend-9d24da10ea5e16069f7214b6baccbe88.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Custom/Control Elements/POC/German_E-stop.blend"
-dest_files=["res://.godot/imported/German_E-stop.blend-7e62bbe62ebc009af10c53e79f5ecbc5.scn"]
+source_file="res://Assets/Models/Custom/Control Elements/Slots/slot_inverted_template.blend"
+dest_files=["res://.godot/imported/slot_inverted_template.blend-9d24da10ea5e16069f7214b6baccbe88.scn"]
 
 [params]
 

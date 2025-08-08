@@ -1,9 +1,17 @@
 extends Interactable
 
 @onready var animation_player: AnimationPlayer = get_node(^"../../AnimationPlayer")
+@onready var text_o: MeshInstance3D = get_node(^"../../Text_O")
+@onready var text_i: MeshInstance3D = get_node(^"../../Text_I")
+@onready var text_ii: MeshInstance3D = get_node(^"../../Text_II")
 
 var is_pressed: bool = false
 var state: int = 0
+
+func _ready() -> void:
+	text_o.mesh = text_o.mesh.duplicate(true)
+	text_i.mesh = text_i.mesh.duplicate(true)
+	text_ii.mesh = text_ii.mesh.duplicate(true)
 
 func primary_text() -> String:
 	return "Switch left"

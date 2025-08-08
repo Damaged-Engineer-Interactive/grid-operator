@@ -1,14 +1,11 @@
-[gd_scene load_steps=30 format=4 uid="uid://tibk7i4h7m3b"]
+[gd_scene load_steps=27 format=4 uid="uid://tibk7i4h7m3b"]
 
-[ext_resource type="PackedScene" uid="uid://dap2alfsh22tf" path="res://Assets/Models/Custom/Control Elements/Panel/Panel_1_old.blend" id="2_5nsto"]
 [ext_resource type="PackedScene" uid="uid://dy26xc485fhld" path="res://Addons/srcoder_fps_controller/player.tscn" id="2_j0p05"]
 [ext_resource type="PackedScene" uid="uid://cyvanvp7040t8" path="res://Scenes/Interactable/Switch-2.tscn" id="4_gjpho"]
-[ext_resource type="PackedScene" uid="uid://chqeh7rsslkub" path="res://Scenes/Interactable/Switch-3.tscn" id="5_p70al"]
-[ext_resource type="PackedScene" uid="uid://b6ugmjbldobwl" path="res://Scenes/Interactable/Lever.tscn" id="6_45d1s"]
-[ext_resource type="PackedScene" uid="uid://dl2gaot7gsvgw" path="res://Scenes/Interactable/Buzzer.tscn" id="7_ti1bm"]
 [ext_resource type="Material" uid="uid://bwcwjfcuqp1dr" path="res://Assets/Materials/Socket_Base.material" id="7_y7y61"]
 [ext_resource type="Material" uid="uid://biq472xh0v3rl" path="res://Assets/Materials/Lever/OFF_Dimm.material" id="8_7yo87"]
 [ext_resource type="Material" uid="uid://dr2thsdo4k5at" path="res://Assets/Materials/Lever/OFF_Lit.material" id="9_ti1bm"]
+[ext_resource type="PackedScene" uid="uid://dl2gaot7gsvgw" path="res://Scenes/Interactable/Buzzer.tscn" id="10_kn06e"]
 [ext_resource type="Material" uid="uid://bm6ubdx4ppxd4" path="res://Assets/Materials/Lever/ON_Dimm.material" id="10_op4cu"]
 [ext_resource type="Material" uid="uid://dilbr8gso0kf1" path="res://Assets/Materials/Lever/ON_Lit.tres" id="11_8l3nt"]
 [ext_resource type="PackedScene" uid="uid://cf4b087tp2ymd" path="res://Scenes/Interactable/E-Stop.tscn" id="13_op4cu"]
@@ -314,90 +311,6 @@ mesh = SubResource("BoxMesh_5cjrv")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_j0p05")
 
-[node name="Panel_1" parent="." instance=ExtResource("2_5nsto")]
-transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -11.2483, 0.975336, -0.0829898)
-
-[node name="Button" parent="Panel_1" instance=ExtResource("14_8l3nt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0.01, -0.01)
-
-[node name="Button2" parent="Panel_1" instance=ExtResource("14_8l3nt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23, 0.01, -0.01)
-
-[node name="Lever" parent="Panel_1" instance=ExtResource("6_45d1s")]
-transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -4.37114e-08, 0.01, 0.01, -0.45)
-
-[node name="Lever2" parent="Panel_1" instance=ExtResource("6_45d1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0.01, -0.67)
-
-[node name="Switch_2" parent="Panel_1" instance=ExtResource("4_gjpho")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.234808, 0.0139448, -0.245527)
-
-[node name="Switch_3" parent="Panel_1" instance=ExtResource("5_p70al")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.23, 0.01, -0.45)
-
-[node name="Switch_4" parent="Panel_1" instance=ExtResource("4_gjpho")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.45, 0.01, -0.23)
-
-[node name="Switch_5" parent="Panel_1" instance=ExtResource("5_p70al")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.45, 0.01, -0.45)
-
-[node name="Panel_3" parent="." instance=ExtResource("2_5nsto")]
-transform = Transform3D(1, 0, 0, 0, -0.707107, -0.707107, 0, 0.707107, -0.707107, -11.2483, 4.43976, -0.977366)
-
-[node name="Button" parent="Panel_3" instance=ExtResource("14_8l3nt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0.01, -0.01)
-
-[node name="Button2" parent="Panel_3" instance=ExtResource("14_8l3nt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23, 0.01, -0.01)
-
-[node name="Lever" parent="Panel_3" instance=ExtResource("6_45d1s")]
-transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -4.37114e-08, 0.01, 0.01, -0.45)
-
-[node name="Lever2" parent="Panel_3" instance=ExtResource("6_45d1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0.01, -0.67)
-
-[node name="Switch_2" parent="Panel_3" instance=ExtResource("4_gjpho")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.234808, 0.0139448, -0.245527)
-
-[node name="Switch_3" parent="Panel_3" instance=ExtResource("5_p70al")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.23, 0.01, -0.45)
-
-[node name="Switch_4" parent="Panel_3" instance=ExtResource("4_gjpho")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.45, 0.01, -0.23)
-
-[node name="Switch_5" parent="Panel_3" instance=ExtResource("5_p70al")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.45, 0.01, -0.45)
-
-[node name="Panel_2" parent="." instance=ExtResource("2_5nsto")]
-transform = Transform3D(1, 0, 0, 0, -5.96046e-08, -1, 0, 1, -5.96046e-08, -11.2483, 2.50991, -1.35027)
-
-[node name="Buzzer" parent="Panel_2" instance=ExtResource("7_ti1bm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45, 0, -0.01)
-
-[node name="Button" parent="Panel_2" instance=ExtResource("14_8l3nt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0.01, -0.01)
-
-[node name="Button2" parent="Panel_2" instance=ExtResource("14_8l3nt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23, 0.01, -0.01)
-
-[node name="Lever" parent="Panel_2" instance=ExtResource("6_45d1s")]
-transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -4.37114e-08, 0.01, 0.01, -0.45)
-
-[node name="Lever2" parent="Panel_2" instance=ExtResource("6_45d1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0.01, -0.67)
-
-[node name="Switch_2" parent="Panel_2" instance=ExtResource("4_gjpho")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.234808, 0.0139448, -0.245527)
-
-[node name="Switch_3" parent="Panel_2" instance=ExtResource("5_p70al")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.23, 0.01, -0.45)
-
-[node name="Switch_4" parent="Panel_2" instance=ExtResource("4_gjpho")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.45, 0.01, -0.23)
-
-[node name="Switch_5" parent="Panel_2" instance=ExtResource("5_p70al")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.45, 0.01, -0.45)
-
 [node name="Panel_new5" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4837, 2.48497, 0)
 
@@ -428,6 +341,20 @@ skeleton = NodePath("")
 [node name="Switch_2" parent="Panel_new5/Slot_2" instance=ExtResource("4_gjpho")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
+[node name="Slot_5" type="Node3D" parent="Panel_new5"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.5, 0, 0)
+
+[node name="Slot" type="MeshInstance3D" parent="Panel_new5/Slot_5"]
+mesh = SubResource("ArrayMesh_kwl8l")
+skeleton = NodePath("")
+
+[node name="Lighting" type="MeshInstance3D" parent="Panel_new5/Slot_5"]
+mesh = SubResource("ArrayMesh_waglr")
+skeleton = NodePath("")
+
+[node name="Switch_2" parent="Panel_new5/Slot_5" instance=ExtResource("4_gjpho")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
 [node name="Slot_3" type="Node3D" parent="Panel_new5"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0.25, 0)
 
@@ -453,3 +380,16 @@ mesh = SubResource("ArrayMesh_r0dna")
 skeleton = NodePath("")
 
 [node name="E-stop" parent="Panel_new5/Slot_4" instance=ExtResource("13_op4cu")]
+
+[node name="Slot_6" type="Node3D" parent="Panel_new5"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.5, 0.25, 0)
+
+[node name="Slot" type="MeshInstance3D" parent="Panel_new5/Slot_6"]
+mesh = SubResource("ArrayMesh_kwl8l")
+skeleton = NodePath("")
+
+[node name="Lighting" type="MeshInstance3D" parent="Panel_new5/Slot_6"]
+mesh = SubResource("ArrayMesh_r0dna")
+skeleton = NodePath("")
+
+[node name="Buzzer" parent="Panel_new5/Slot_6" instance=ExtResource("10_kn06e")]

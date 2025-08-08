@@ -18,11 +18,11 @@ func _process(_delta: float) -> void:
 			current_collider = collider
 			set_interaction_text(collider)
 		
-		if Input.is_action_just_pressed(&"primary"):
+		if Input.is_action_just_pressed(&"primary") and collider.primary_text() != "":
 			collider.primary()
 			set_interaction_text(collider)
 		
-		if Input.is_action_just_pressed(&"secondary"):
+		if Input.is_action_just_pressed(&"secondary") and collider.secondary_text() != "":
 			collider.secondary()
 			set_interaction_text(collider)
 	elif current_collider:
