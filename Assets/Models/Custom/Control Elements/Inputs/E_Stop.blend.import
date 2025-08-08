@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c1llglfylq4h"
-path="res://.godot/imported/Button.blend-e1a0bd4a424e9b36a4768ca47031f087.scn"
+uid="uid://i0nny2nw6lmu"
+path="res://.godot/imported/E_Stop.blend-ef19a1ca998c2e776156c722f739480a.scn"
 
 [deps]
 
-source_file="res://Assets/Button.blend"
-dest_files=["res://.godot/imported/Button.blend-e1a0bd4a424e9b36a4768ca47031f087.scn"]
+source_file="res://Assets/Models/Custom/Control Elements/Inputs/E_Stop.blend"
+dest_files=["res://.godot/imported/E_Stop.blend-ef19a1ca998c2e776156c722f739480a.scn"]
 
 [params]
 
