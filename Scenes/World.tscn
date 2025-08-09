@@ -1,7 +1,10 @@
-[gd_scene load_steps=27 format=4 uid="uid://tibk7i4h7m3b"]
+[gd_scene load_steps=30 format=4 uid="uid://tibk7i4h7m3b"]
 
+[ext_resource type="PackedScene" uid="uid://dfxw0m6mply8y" path="res://Scenes/Models/3D/Slots/slot_closed.tscn" id="2_7yo87"]
 [ext_resource type="PackedScene" uid="uid://dy26xc485fhld" path="res://Addons/srcoder_fps_controller/player.tscn" id="2_j0p05"]
 [ext_resource type="PackedScene" uid="uid://cyvanvp7040t8" path="res://Scenes/Interactable/Switch-2.tscn" id="4_gjpho"]
+[ext_resource type="PackedScene" uid="uid://chqeh7rsslkub" path="res://Scenes/Interactable/Switch-3.tscn" id="4_ti1bm"]
+[ext_resource type="PackedScene" uid="uid://d2uo8itaahefh" path="res://Scenes/Interactable/Potentiometer.tscn" id="7_op4cu"]
 [ext_resource type="Material" uid="uid://bwcwjfcuqp1dr" path="res://Assets/Materials/Socket_Base.material" id="7_y7y61"]
 [ext_resource type="Material" uid="uid://biq472xh0v3rl" path="res://Assets/Materials/Lever/OFF_Dimm.material" id="8_7yo87"]
 [ext_resource type="Material" uid="uid://dr2thsdo4k5at" path="res://Assets/Materials/Lever/OFF_Lit.material" id="9_ti1bm"]
@@ -300,6 +303,66 @@ text = "Press"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="IncreaseAction" type="PanelContainer" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_op4cu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/HBoxContainer/IncreaseAction"]
+layout_mode = 2
+alignment = 1
+
+[node name="InputKey" type="Label" parent="UI/HBoxContainer/IncreaseAction/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "E / Scroll"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="UI/HBoxContainer/IncreaseAction/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_8l3nt")
+
+[node name="IncreaseActionLabel" type="Label" parent="UI/HBoxContainer/IncreaseAction/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Press"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DecreaseAction" type="PanelContainer" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_op4cu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/HBoxContainer/DecreaseAction"]
+layout_mode = 2
+alignment = 1
+
+[node name="InputKey" type="Label" parent="UI/HBoxContainer/DecreaseAction/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Q / Scroll"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="UI/HBoxContainer/DecreaseAction/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_8l3nt")
+
+[node name="DecreaseActionLabel" type="Label" parent="UI/HBoxContainer/DecreaseAction/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Press"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Player" parent="." instance=ExtResource("2_j0p05")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.30479, 2.24779, 2.07044)
 
@@ -310,6 +373,47 @@ mesh = SubResource("BoxMesh_5cjrv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_j0p05")
+
+[node name="Panel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, -13.719, 2, 0)
+
+[node name="Slot_1" parent="Panel" instance=ExtResource("2_7yo87")]
+
+[node name="Switch_2" parent="Panel/Slot_1" instance=ExtResource("4_gjpho")]
+
+[node name="Slot_2" parent="Panel" instance=ExtResource("2_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0)
+
+[node name="Switch_3" parent="Panel/Slot_2" instance=ExtResource("4_ti1bm")]
+
+[node name="Slot_3" parent="Panel" instance=ExtResource("2_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
+
+[node name="Slot_4" parent="Panel" instance=ExtResource("2_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, 0)
+
+[node name="E-stop" parent="Panel/Slot_4" instance=ExtResource("13_op4cu")]
+
+[node name="Slot_5" parent="Panel" instance=ExtResource("2_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+
+[node name="Button" parent="Panel/Slot_5" instance=ExtResource("14_8l3nt")]
+
+[node name="Slot_6" parent="Panel" instance=ExtResource("2_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, -0.25)
+
+[node name="Potentiometer" parent="Panel/Slot_6" instance=ExtResource("7_op4cu")]
+
+[node name="Slot_7" parent="Panel" instance=ExtResource("2_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.25)
+
+[node name="Slot_8" parent="Panel" instance=ExtResource("2_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, -0.25)
+
+[node name="Switch_3" parent="Panel/Slot_8" instance=ExtResource("4_ti1bm")]
+
+[node name="Slot_9" parent="Panel" instance=ExtResource("2_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, -0.125)
 
 [node name="Panel_new5" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4837, 2.48497, 0)
@@ -393,3 +497,8 @@ mesh = SubResource("ArrayMesh_r0dna")
 skeleton = NodePath("")
 
 [node name="Buzzer" parent="Panel_new5/Slot_6" instance=ExtResource("10_kn06e")]
+
+[connection signal="sig_state" from="Panel/Slot_1/Switch_2" to="Panel/Slot_9" method="func_state"]
+[connection signal="sig_trigger" from="Panel/Slot_5/Button" to="Panel/Slot_9" method="func_state"]
+[connection signal="sig_value" from="Panel/Slot_6/Potentiometer" to="Panel/Slot_9" method="func_color"]
+[connection signal="sig_state" from="Panel/Slot_8/Switch_3" to="Panel/Slot_4" method="func_color"]

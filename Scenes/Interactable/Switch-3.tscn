@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=4 uid="uid://chqeh7rsslkub"]
+[gd_scene load_steps=21 format=4 uid="uid://chqeh7rsslkub"]
 
 [ext_resource type="Script" uid="uid://d0busmb3jiqg5" path="res://Scripts/Interactable/Switch_3.gd" id="1_h4kis"]
+[ext_resource type="Script" uid="uid://b5pu5xx0wrolr" path="res://Scripts/Modular_IO/switch_3.gd" id="1_pli5j"]
 [ext_resource type="Material" uid="uid://bwcwjfcuqp1dr" path="res://Assets/Materials/Socket_Base.material" id="1_xbfif"]
 [ext_resource type="Material" uid="uid://dt5hmyg6vun76" path="res://Assets/Materials/Interactable.material" id="2_jyetm"]
 [ext_resource type="Material" uid="uid://dbyw5f6678t7f" path="res://Assets/Materials/Text_Active.material" id="4_rgytm"]
@@ -204,6 +205,30 @@ tracks/2/keys = {
 "update": 1,
 "values": [ExtResource("5_jyetm"), ExtResource("5_jyetm"), ExtResource("4_rgytm")]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Interactable/Interactable:update_state_i")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Interactable/Interactable:update_state_ii")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_2upl7"]
 resource_name = "O-I"
@@ -244,6 +269,30 @@ tracks/2/keys = {
 "update": 1,
 "values": [ExtResource("5_jyetm"), ExtResource("5_jyetm"), ExtResource("4_rgytm")]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Interactable/Interactable:update_state_o")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Interactable/Interactable:update_state_i")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xbfif"]
 _data = {
@@ -252,6 +301,8 @@ _data = {
 }
 
 [node name="Switch_3" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_pli5j")
 
 [node name="Base" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_mpjs1")
@@ -262,11 +313,13 @@ transform = Transform3D(0.819152, 0, 0.573576, 0, 1, 0, -0.573576, 0, 0.819152, 
 mesh = SubResource("ArrayMesh_gbm5v")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Interactable"]
+[node name="Interactable" type="StaticBody3D" parent="Interactable"]
+unique_name_in_owner = true
 collision_layer = 2
 script = ExtResource("1_h4kis")
+update_state_o = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable/Interactable"]
 shape = SubResource("ConcavePolygonShape3D_2upl7")
 debug_color = Color(0.7, 0.590625, 0, 0.42)
 
@@ -293,4 +346,4 @@ libraries = {
 &"": SubResource("AnimationLibrary_xbfif")
 }
 
-[connection signal="animation_finished" from="AnimationPlayer" to="Interactable/StaticBody3D" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="Interactable/Interactable" method="_on_animation_player_animation_finished"]

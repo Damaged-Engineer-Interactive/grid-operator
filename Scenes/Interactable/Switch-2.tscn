@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=4 uid="uid://cyvanvp7040t8"]
+[gd_scene load_steps=19 format=4 uid="uid://cyvanvp7040t8"]
 
 [ext_resource type="Script" uid="uid://db255t3xgjhtb" path="res://Scripts/Interactable/Switch_2.gd" id="1_fjelj"]
 [ext_resource type="Material" uid="uid://bwcwjfcuqp1dr" path="res://Assets/Materials/Socket_Base.material" id="1_q1skn"]
+[ext_resource type="Script" uid="uid://b7hw2hi657ykn" path="res://Scripts/Modular_IO/switch_2.gd" id="1_wkc2x"]
 [ext_resource type="Material" uid="uid://dt5hmyg6vun76" path="res://Assets/Materials/Interactable.material" id="2_hov1b"]
 [ext_resource type="Material" uid="uid://dbyw5f6678t7f" path="res://Assets/Materials/Text_Active.material" id="4_hov1b"]
 [ext_resource type="Material" uid="uid://84gsvp0p7mma" path="res://Assets/Materials/Text_Inactive.material" id="5_wkc2x"]
@@ -174,13 +175,67 @@ tracks/2/keys = {
 "update": 1,
 "values": [ExtResource("4_hov1b"), ExtResource("5_wkc2x"), ExtResource("5_wkc2x")]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Interactable/Interactable:update_state_on")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Interactable/Interactable:update_state_off")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_wkc2x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Interactable/Interactable:update_state_on")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Interactable/Interactable:update_state_off")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o4yw2"]
 _data = {
+&"RESET": SubResource("Animation_wkc2x"),
 &"switch": SubResource("Animation_q1skn")
 }
 
 [node name="Switch_2" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_wkc2x")
 
 [node name="Base" type="MeshInstance3D" parent="."]
 unique_name_in_owner = true
@@ -188,12 +243,12 @@ mesh = SubResource("ArrayMesh_ir76a")
 skeleton = NodePath("")
 
 [node name="Interactable" type="MeshInstance3D" parent="."]
-unique_name_in_owner = true
 transform = Transform3D(0.754709, 0, 0.656059, 0, 1, 0, -0.656059, 0, 0.754709, 0, 0.02, 0)
 mesh = SubResource("ArrayMesh_hov1b")
 skeleton = NodePath("")
 
 [node name="Interactable" type="StaticBody3D" parent="Interactable"]
+unique_name_in_owner = true
 transform = Transform3D(0.819152, -6.66851e-17, -0.573576, 4.50564e-32, 1, -1.16262e-16, 0.573576, 9.52363e-17, 0.819152, 0.0147479, -0.031029, 0.0103266)
 collision_layer = 2
 script = ExtResource("1_fjelj")
